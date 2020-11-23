@@ -1,0 +1,30 @@
+// RESPONSIVE BREAKPOINTS
+$bp-small: 37.5em; // 600
+$bp-medium: 56.25em; // 900px
+$bp-large: 75em; // 1200px
+
+// MARGINS
+.mb-sm {
+    margin-bottom: 1rem;
+    @media only screen and (min-width: $bp-large) {
+       margin-bottom: 2rem;
+    }
+ }
+ .mb-md {
+    margin-bottom: 2rem;
+    @media only screen and (min-width: $bp-large) {
+       margin-bottom: 3rem;
+    }
+ }
+ .mb-lg { 
+    margin-bottom: 4rem;
+    @media only screen and (min-width: $bp-large) {
+       margin-bottom: 6rem;
+    }
+ }
+ .mb-hg { 
+    margin-bottom: 4rem;
+    @media only screen and (min-width: $bp-large) {
+       margin-bottom: 8rem;
+    }
+ }

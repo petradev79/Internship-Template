@@ -1,0 +1,38 @@
+.feature {
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    text-align: center;
+
+    &__icon {
+        width: 7rem;
+        height: 7rem;
+        padding: 2rem;
+        justify-self: center;
+        -webkit-mask-image: url(../../img/blob1.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../../img/blob1.svg);
+        mask-size: cover;
+
+        &--1 {
+            fill: $color-tertiary;
+            background-color: lighten($color-tertiary, 25%);
+        }
+
+        &--2 {
+            fill: $color-primary;
+            background-color: lighten($color-primary, 25%);
+        }
+
+        &--3 {
+            fill: $color-quaternary;
+            background-color: lighten($color-quaternary, 35%);
+        }
+
+        &--4 {
+            fill: $color-quinary;
+            background-color: lighten($color-quinary, 20%);
+        }
+    }  
+}

@@ -1,0 +1,24 @@
+// ASSETS
+@import "assets/utilities"; 
+@import "assets/variables";
+
+// BASE
+@import "base/animations";
+@import "base/base";
+@import "base/home";
+@import "base/typography";
+
+// COMPONENTS
+@import "components/btn";
+@import "components/card";
+@import "components/customer";
+@import "components/feature";
+@import "components/footer-items";
+@import "components/list";
+@import "components/process-step";
+@import "components/search";
+
+// LAYOUT
+@import "layout/footer";
+@import "layout/header";
+@import "layout/navigation";

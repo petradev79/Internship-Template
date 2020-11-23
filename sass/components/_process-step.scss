@@ -1,0 +1,53 @@
+.process-step {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 1rem;
+    align-items: center;
+
+    &__icon-box { position: relative; }
+
+    &__icon {
+        width: 7rem;
+        height: 7rem;
+        padding: 2rem;
+        justify-self: center;
+        // -webkit-mask-image: url(../../img/blob1.svg);
+        -webkit-mask-image: url(../../img/blob1.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../../img/blob1.svg);
+        mask-size: cover;
+
+        &--1 {
+            fill: $color-primary;
+            background-color: lighten($color-primary, 25%);
+        }
+
+        &--2 {
+            fill: $color-quaternary;
+            background-color: lighten($color-quaternary, 35%);
+        }
+
+        &--3 {
+            fill: $color-secondary;
+            background-color: lighten($color-secondary, 25%);
+        }
+    }
+
+    &__number {
+        font-size: 1rem;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--1 { background-color: $color-primary; }
+        &--2 { background-color: $color-quaternary; }
+        &--3 { background-color: $color-secondary; }
+    }
+}

@@ -1,0 +1,28 @@
+.list {
+    list-style: none;
+
+    &__item {
+        font-size: 1.4rem;
+    }
+
+    &--side &__item {
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 1rem;
+            width: 1rem;
+            margin-right: .7rem;
+            background-color: $color-primary;
+            -webkit-mask-image: url(../../img/check.svg);
+            -webkit-mask-size: cover;
+            mask-image: url(../../img/check.svg);
+            mask-size: cover;
+        }
+    }
+
+    &--center &__item {
+        span {
+            font-weight: 700;
+        }        
+    }
+}

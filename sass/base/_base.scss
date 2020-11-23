@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: .5px;
+    color: $color-grey-dark;
+    background-color: lighten($color-primary, 35%);
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+}
+
+main {
+    grid-column: full-start / full-end;
+    position: relative;
+    background: linear-gradient(
+        to bottom,
+        $color-white,
+        darken($color-white, 5%)
+    );
+
+    @media only screen and (min-width: $bp-medium) {
+        padding: 4rem 0;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+        padding: 6rem 0;
+    }
+}
+
+.wrapper {
+    width: auto;
+    max-width: 1140px;
+    margin: 0 auto !important;
+}
+
+.title-center {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.side-img {
+    width: 100%;
+}
+
+.smoke-box {
+    position: absolute;
+    width: 100%;
+    top: -2rem;
+
+    @media only screen and (min-width: $bp-small) {
+        top: -5rem;
+    }
+
+    img {
+        width: 100%;
+        height: auto; 
+    }
+}

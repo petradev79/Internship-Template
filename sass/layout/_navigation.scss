@@ -1,0 +1,136 @@
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: $color-white;
+    z-index: 100;
+
+    @media only screen and (min-width: $bp-small) {
+        padding: 3rem 2rem 1rem 2rem;
+        background-color: transparent;
+        transition: all .3s ease;
+
+        &.sticky {
+            padding: 1rem 2rem;
+            background-color: $color-white;
+        }
+    }
+
+    &__small {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__big {
+        @media only screen and (min-width: $bp-small) {
+            width: auto;
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    // Hamburger button 
+    &__button {
+        display: flex;
+        position: relative;
+        height: 3.5rem;
+        z-index: 100;
+
+        @media only screen and (min-width: $bp-small) {
+            display: none;
+        }
+
+        &--icon,
+        &--icon::before,
+        &--icon::after {
+            width: 3.5rem;
+            height: 2px;
+            display: inline-block;
+            background-color: $color-black;
+            margin-top: 1.5rem;
+        }
+
+        &--icon::before,
+        &--icon::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &--icon::before { top: -1rem; }
+
+        &--icon::after { top: 1rem; }
+
+        // Transform button
+        &--icon.toggle { background-color: transparent; }
+
+        &--icon.toggle::before {
+            transform: rotate(135deg);
+            top: 0;
+        }
+
+        &--icon.toggle::after {
+            transform: rotate(-135deg);
+            top: 0;
+        }
+    }
+
+    // Nav menu
+    &__menu {
+        margin: 2.5rem;
+        display: none;
+        flex-direction: column;
+
+        @media only screen and (min-width: $bp-small) {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        &.show { display: flex; }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+			font-size: 1.4rem;
+            padding: 1rem 2rem;
+			color: $color-black;
+			text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            transition: all .3s;
+            background-color: lighten($color-grey-light, 30%);
+
+            @media only screen and (min-width: $bp-small) {
+                padding: 0;
+                background-color: transparent;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+
+            @media only screen and (min-width: $bp-small) {
+                margin-bottom: 0;
+                margin-right: 3rem;
+            } 
+        }
+
+        &:hover,
+		&:active {
+			color: $color-grey-light;
+            
+            @media only screen and (min-width: $bp-small) {
+                transform: translateY(.3rem);
+            }
+		}
+    }
+}

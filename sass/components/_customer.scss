@@ -1,0 +1,33 @@
+.customer {
+    background-color: $color-white;
+    padding: 3rem;
+    margin: 0 5%;
+    
+    &__text {
+        font-size: 1.4rem;
+        color: $color-grey-light;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    &__img {
+        width: 6rem !important;
+        height: 6rem;
+        display: flex;
+        margin-right: 2rem;
+        -webkit-mask-image: url(../../img/blob1.svg);
+        -webkit-mask-size: cover;
+        mask-image: url(../../img/blob1.svg);
+        mask-size: cover;
+        overflow: hidden;
+    }
+
+    &__info span {
+        font-size: 1.4rem;
+        color: $color-grey-light;
+    }
+}
